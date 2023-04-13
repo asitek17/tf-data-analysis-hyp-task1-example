@@ -16,6 +16,6 @@ def solution(x_success: int,
     x = norm.ppf(1/2 - alpha)
     
     p0 = x_success / x_cnt
-    U = (y_success / y_cnt - p0) * y_cnt ** (1/2) / (p0 * (1 - p0) ) ** (1/2)
+    U = ((y_success / y_cnt - p0) * (y_cnt ** (1/2))) / ((p0 * (1 - p0) ) ** (1/2))
     
     return U >= x # Ваш ответ, True или False
